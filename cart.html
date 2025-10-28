@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart | StyleStool</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cart.css" />
+  <script src="cart.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">StyleStool<span>.</span></a>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="#"><img src="images/user.svg" alt="User"></a>
+        <a href="cart.html" class="active"><img src="images/cart.svg" alt="Cart"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Header -->
+  <section class="cart-hero">
+    <div class="hero-content">
+      <h1>Your Shopping Cart</h1>
+      <p>Review your selected items before checkout.</p>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <div class="cart-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cartItems">
+          <tr>
+            <td><img src="images/product-1.png" alt="Nordic Chair" /> Nordic Chair</td>
+            <td>$50.00</td>
+            <td><input type="number" class="qty" value="1" min="1"></td>
+            <td class="total">$50.00</td>
+            <td><button class="remove">×</button></td>
+          </tr>
+          <tr>
+            <td><img src="images/product-2.png" alt="Kruzo Chair" /> Kruzo Aero Chair</td>
+            <td>$78.00</td>
+            <td><input type="number" class="qty" value="2" min="1"></td>
+            <td class="total">$156.00</td>
+            <td><button class="remove">×</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cart-summary">
+        <h3>Cart Summary</h3>
+        <p>Subtotal: <span id="subtotal">$206.00</span></p>
+        <a href="checkout.html" class="btn">Proceed to Checkout</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>StyleStool<span>.</span></h3>
+        <p>Crafting comfort and style for your modern living spaces.</p>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2025 StyleStool. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
