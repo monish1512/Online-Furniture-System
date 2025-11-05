@@ -1,4 +1,4 @@
-// Simulate form submission
+// Checkout form validation and redirection
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("checkoutForm");
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    alert("Thank you for your purchase, " + name + "! Redirecting to the thank you page...");
+    alert(`Thank you for your purchase, ${name}! Redirecting to the thank you page...`);
     window.location.href = "thankyou.html";
   });
 });

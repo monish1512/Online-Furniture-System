@@ -1,10 +1,10 @@
-// Add hover animations or dynamic interactions later
 document.addEventListener("DOMContentLoaded", () => {
-  const serviceItems = document.querySelectorAll(".service-item");
+  const whyItems = document.querySelectorAll(".why-item");
 
-  serviceItems.forEach((item) => {
+  // Subtle floating animation on hover
+  whyItems.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-      item.style.transform = "translateY(-5px)";
+      item.style.transform = "translateY(-8px)";
     });
 
     item.addEventListener("mouseleave", () => {

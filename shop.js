@@ -1,9 +1,20 @@
-// Example Add to Cart interaction
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".btn");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      alert("Item added to cart!");
+  // Handle product clicks
+  const products = document.querySelectorAll(".product-item");
+
+  products.forEach((item) => {
+    item.addEventListener("click", () => {
+      const product = {
+        title: item.querySelector(".product-title").textContent,
+        price: item.querySelector(".product-price").textContent,
+        image: item.querySelector(".product-img").getAttribute("src")
+      };
+
+      // Save product to localStorage (so cart.html can use it)
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+
+      // Redirect to cart page
+      window.location.href = "cart.html";
     });
   });
 });

@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: #fff;
   color: #222;
   line-height: 1.6;
@@ -15,12 +15,12 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
-  background: #111;
-  color: #fff;
+  background: #000;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 .nav-container {
   display: flex;
@@ -28,29 +28,64 @@ body {
   align-items: center;
   padding: 1rem 2rem;
 }
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 .nav-links a.active,
 .nav-links a:hover {
   color: #e3b04b;
 }
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+.nav-icons a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 .nav-icons img {
   width: 20px;
-  margin-left: 15px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }
-.brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 2px;
 }
 
 /* Thank You Section */
@@ -94,13 +129,29 @@ body {
   background: #e3b04b;
   color: #111;
 }
-
 /* Footer */
 .footer {
-  background: #111;
+  background: #000;
   color: #fff;
   padding: 2rem;
   text-align: center;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.footer-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-left p,
+.footer-right p {
+  color: rgba(255, 255, 255, 0.7);
 }
 .footer span {
   color: #e3b04b;

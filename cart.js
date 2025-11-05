@@ -1,11 +1,10 @@
-// Update totals dynamically
 document.addEventListener("DOMContentLoaded", () => {
   const rows = document.querySelectorAll("#cartItems tr");
   const subtotalElement = document.getElementById("subtotal");
 
   function updateTotal() {
     let subtotal = 0;
-    rows.forEach((row) => {
+    rows.forEach(row => {
       const price = parseFloat(row.cells[1].textContent.replace("$", ""));
       const qty = parseInt(row.querySelector(".qty").value);
       const total = price * qty;
@@ -15,14 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
     subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
   }
 
-  // Quantity change event
-  document.querySelectorAll(".qty").forEach((input) => {
+  // Quantity change
+  document.querySelectorAll(".qty").forEach(input => {
     input.addEventListener("input", updateTotal);
   });
 
-  // Remove item event
-  document.querySelectorAll(".remove").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+  // Remove item
+  document.querySelectorAll(".remove").forEach(btn => {
+    btn.addEventListener("click", e => {
       e.target.closest("tr").remove();
       updateTotal();
     });

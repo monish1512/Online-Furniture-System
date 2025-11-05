@@ -1,8 +1,9 @@
-// Simple contact form validation and alert
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
 
-  form.addEventListener("submit", (e) => {
+  // ===== Contact Form Validation =====
+  const contactForm = document.getElementById("contactForm");
+
+  contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -10,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("message").value.trim();
 
     if (!name || !email || !message) {
-      alert("Please fill in all fields.");
+      alert("Please fill in all fields before submitting.");
       return;
     }
 
-    alert("Thank you for contacting us, " + name + "! We’ll get back to you soon.");
-    form.reset();
+    alert(`Thank you, ${name}! Your message has been sent successfully.`);
+    contactForm.reset();
   });
 });

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | StyleStool</title>
   <link rel="icon" href="images/favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="blog.css" />
   <script src="blog.js" defer></script>
 </head>
@@ -15,9 +16,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="brand">StyleStool<span>.</span></a>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <a href="index.html" class="brand">🪑 Furniture</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
@@ -27,72 +26,105 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-icons">
-        <a href="#"><img src="images/user.svg" alt="User"></a>
+        <a href="login.html"><img src="images/user.svg" alt="User"></a>
         <a href="cart.html"><img src="images/cart.svg" alt="Cart"></a>
       </div>
     </div>
   </nav>
-
-  <!-- Blog Hero -->
-  <section class="blog-hero">
-    <div class="hero-content">
-      <h1>Our Blog</h1>
-      <p>Insights, trends, and inspirations from the world of modern furniture.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Blog</h1>
+        <p>
+          Every piece is thoughtfully designed to combine beauty and durability. Our interiors echo your personality —
+          blending luxury, comfort, and style to turn your space into a masterpiece.
+        </p>
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn">Shop Now</a>
+          <a href="services.html" class="btn-outline">Explore</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/couch.png" alt="Couch">
+      </div>
     </div>
   </section>
 
   <!-- Blog Section -->
   <section class="blog-section">
-    <div class="blog-container">
-
-      <div class="blog-post">
-        <img src="images/blog-1.jpg" alt="Blog 1" />
-        <div class="blog-text">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="images/post-1.jpg" alt="Post 1">
+        <div class="blog-content">
           <h3>Designing Spaces That Inspire</h3>
-          <p>
-            Learn how our creative design process brings together functionality and beauty in every space we create.
+          <p>Learn how our creative design process brings together functionality and beauty in every space we create.
           </p>
-          <a href="#" class="read-more">Read More →</a>
+          <a href="blog.html" class="read-more">Read More →</a>
         </div>
       </div>
-
-      <div class="blog-post">
-        <img src="images/blog-2.jpg" alt="Blog 2" />
-        <div class="blog-text">
+      <div class="blog-card">
+        <img src="images/post-2.jpg" alt="Post 2">
+        <div class="blog-content">
           <h3>Choosing the Right Furniture</h3>
-          <p>
-            Discover how to select furniture pieces that match your personality and enhance your living space.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
+          <p>Discover how to select furniture pieces that match your personality and enhance your living space.</p>
+          <a href="blog.html" class="read-more">Read More →</a>
         </div>
       </div>
-
-      <div class="blog-post">
-        <img src="images/blog-3.jpg" alt="Blog 3" />
-        <div class="blog-text">
+      <div class="blog-card">
+        <img src="images/post-3.jpg" alt="Post 3">
+        <div class="blog-content">
           <h3>2025 Home Decor Trends</h3>
-          <p>
-            Explore the upcoming furniture and interior design trends that will dominate this year.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
+          <p>Explore the upcoming furniture and interior design trends that will dominate this year.</p>
+          <a href="blog.html" class="read-more">Read More →</a>
         </div>
       </div>
-
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"My experience with StyleStool Interiors has been phenomenal. Every design element felt meticulously planned,
+          blending functionality with timeless elegance."</p>
+        <h4>Maria Jones</h4>
+        <span>CEO, Co-Founder, XYZ Inc.</span>
+      </div>
+      <div class="testimonial">
+        <p>"Their craftsmanship speaks volumes — each piece balances beauty with durability. My home now feels both
+          stylish and comfortable."</p>
+        <h4>Robert Fox</h4>
+        <span>Designer, HomeCraft</span>
+      </div>
+      <div class="testimonial">
+        <p>"StyleStool transformed my space into a luxurious sanctuary. Every detail reflects sophistication and
+          warmth."</p>
+        <h4>Kristin Watson</h4>
+        <span>Founder, Urban Living</span>
+      </div>
+    </div>
+    <div class="testimonial-controls">
+      <button id="prev">‹</button>
+      <button id="next">›</button>
+    </div>
+  </section>
+
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
-        <h3>StyleStool<span>.</span></h3>
+        <h3>Furniture</h3>
         <p>Crafting comfort and style for your modern living spaces.</p>
       </div>
       <div class="footer-right">
-        <p>&copy; 2025 StyleStool. All rights reserved.</p>
+        <p>&copy; 2025 Furniture. All rights reserved.</p>
       </div>
     </div>
   </footer>
-
 </body>
+
 </html>

@@ -1,16 +1,38 @@
-// Simple smooth scroll effect for internal links
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 60,
-          behavior: "smooth"
-        });
-      }
-    });
+  const track = document.getElementById("testimonial-track");
+  const slides = document.querySelectorAll(".testimonial");
+  const dotsContainer = document.getElementById("slider-dots");
+
+  let current = 0;
+  const total = slides.length;
+
+  // Create navigation dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
   });
+
+  const dots = document.querySelectorAll(".dot");
+
+  function goToSlide(index) {
+    current = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    updateDots();
+  }
+
+  function nextSlide() {
+    current = (current + 1) % total;
+    goToSlide(current);
+  }
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === current);
+    });
+  }
+
+  setInterval(nextSlide, 4000);
 });

@@ -4,20 +4,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fff;
-  color: #222;
+  font-family: "Inter", sans-serif;
+  background-color: #eff2f1;
+  color: #2f2f2f;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Navbar */
 .navbar {
-  background: #111;
-  color: #fff;
+  background: #000;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 .nav-container {
   display: flex;
@@ -25,87 +26,177 @@ body {
   align-items: center;
   padding: 1rem 2rem;
 }
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 .nav-links a.active,
 .nav-links a:hover {
   color: #e3b04b;
 }
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+.nav-icons a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 .nav-icons img {
   width: 20px;
-  margin-left: 15px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }
-.brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 2px;
 }
 
 /* Hero Section */
-.shop-hero {
-  background: #f7f7f7;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-.shop-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.shop-hero p {
-  color: #666;
+.hero {
+  background: #eff2f1;
+  color: #fff;
+  text-align: left;
+  padding: 5rem 2rem;
 }
 
-/* Product Grid */
-.container {
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3b5d50;
+}
+
+/* Product Section */
+.product-section {
+  padding: 5rem 2rem;
+}
+
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  padding: 3rem 2rem;
 }
-.product {
+
+.product-item {
   text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  transition: box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  position: relative;
+  transition: 0.3s ease;
+  overflow: hidden;
 }
-.product:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+.product-item:hover {
+  background: #dce5e4;
 }
-.product img {
+
+.product-item img {
   width: 100%;
   max-width: 250px;
-  margin-bottom: 1rem;
+  transition: 0.3s;
+  position: relative;
+  top: 0;
 }
-.btn {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  cursor: pointer;
+
+.product-item:hover img {
+  top: -20px;
+}
+
+.product-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.product-price {
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.icon-cross {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0;
   transition: 0.3s;
 }
-.btn:hover {
-  background: #e3b04b;
-  color: #111;
+
+.icon-cross img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-item:hover .icon-cross {
+  opacity: 1;
+  bottom: 15px;
 }
 
 /* Footer */
 .footer {
-  background: #111;
+  background: #000;
   color: #fff;
   padding: 2rem;
   text-align: center;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.footer-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-left p,
+.footer-right p {
+  color: rgba(255, 255, 255, 0.7);
 }
 .footer span {
   color: #e3b04b;
