@@ -333,12 +333,13 @@ img {
 }
 .newsletter-form button {
   border-radius: 30px;
+  border: none;
 }
 
 /* ================= BLOG ================= */
 .blog {
   background: #f8f9fa;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
 }
 .blog h2 {
@@ -376,6 +377,9 @@ img {
 .read-more {
   color: #3b5d50;
   font-weight: 600;
+}
+.read-more:hover{
+  color: #e3b04b;
 }
 /* Footer */
 .footer {
